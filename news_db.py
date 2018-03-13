@@ -1,10 +1,8 @@
+#!/usr/bin/env python3
+
 """Tool to answer questions on the news database."""
 
 import psycopg2
-
-# db = psycopg2.connect("dbname=news")
-# c = db.cursor()
-
 
 def popular_articles(n):
     """
@@ -73,7 +71,7 @@ def request_errors(n):
     db = psycopg2.connect("dbname=news")
     c = db.cursor()
 
-    c.execute("select dt, request_total, "
+    c.execute("select to_char(dt,'Mon DD, YYYY'), request_total, "
               "request_failure, "
               "(request_failure::float * 100 / "
               "request_total) "
@@ -89,7 +87,7 @@ def request_errors(n):
         if stat[3] > n:
             print("{} -- {}% errors".
                   format(
-                      stat[0].strftime("%b %d, %Y"),
+                      stat[0],
                       stat[3]
                       )
                   )
