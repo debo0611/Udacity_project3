@@ -4,6 +4,7 @@
 
 import psycopg2
 
+
 def popular_articles(n):
     """
     Show the most popular ('n' number of) posts.
