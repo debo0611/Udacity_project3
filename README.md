@@ -24,5 +24,5 @@ Currently no views are added to the database.
 
 **How to execute**
 There are 2 ways to execute the script.
-1. (recommended) Execute on the terminal with python3: ** # python3 news_db.py **
-2. Execute the script directly (ensure it has execute permissions set) ** # ./news_db.py **
+1. (recommended) Execute on the terminal with python3: **# python3 news_db.py**
+2. Execute the script directly (ensure it has execute permissions set) **# ./news_db.py**
